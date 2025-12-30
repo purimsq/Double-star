@@ -23,7 +23,7 @@ const transporter = nodemailer.createTransport({
 });
 
 // Route to handle email sending
-app.post('/send-email', (req, res) => {
+app.post('/api/send-email', (req, res) => {
     const { name, phone, email, service, message, otherDetail } = req.body;
 
     const emailSubject = `Double Star Hire Request: ${service}`;
