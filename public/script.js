@@ -187,7 +187,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const result = await response.json();
 
                 if (response.ok && result.success) {
-                    btn.innerText = 'Message Sent!';
+                    btn.innerText = 'Message Sent! We will get back to you soon.';
                     btn.style.backgroundColor = '#10B981';
                     form.reset();
                     if (otherServiceGroup) {
