@@ -1,11 +1,17 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Initialize AOS Animation
-    AOS.init({
-        duration: 800,
-        easing: 'ease-out-cubic',
-        once: true,
-        offset: 50
-    });
+    try {
+        if (typeof AOS !== 'undefined') {
+            AOS.init({
+                duration: 800,
+                easing: 'ease-out-cubic',
+                once: true,
+                offset: 50
+            });
+        }
+    } catch (err) {
+        console.warn('AOS Animation failed to initialize:', err);
+    }
 
     // Mobile Menu Toggle
     const mobileBtn = document.querySelector('.mobile-menu-btn');
