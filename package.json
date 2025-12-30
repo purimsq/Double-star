@@ -2,7 +2,6 @@
   "name": "double-star-server",
   "version": "1.0.0",
   "description": "Backend for Double Star Website",
-  "main": "server.js",
   "scripts": {
     "dev": "node server.js"
   },
