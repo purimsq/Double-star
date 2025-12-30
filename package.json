@@ -4,7 +4,7 @@
   "description": "Backend for Double Star Website",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "dev": "node server.js"
   },
   "dependencies": {
     "express": "^4.18.2",
