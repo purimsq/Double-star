@@ -160,8 +160,10 @@ document.addEventListener('DOMContentLoaded', () => {
             btn.disabled = true;
 
             try {
-                // Send to local backend
-                const response = await fetch('http://localhost:3000/send-email', {
+                // Send to Vercel Serverless Function (relative path works for both local 'vercel dev' and production)
+                // Note: For local testing without 'vercel dev', you might need the full localhost URL, 
+                // but for deployment, relative is mandatory.
+                const response = await fetch('/api/send-email', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
